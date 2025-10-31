@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Her Government — Chatbot</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald:wght@200;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Top navigation -->
+  <nav class="topbar">
+    <div class="brand">HER GOVERNMENT</div>
+    <div class="navlinks">
+      <button class="nav-btn" data-scroll="mission">MISSION</button>
+      <button class="nav-btn" data-scroll="chat">CHATBOT</button>
+    </div>
+  </nav>
+
+  <main class="main-wrap">
+    <!-- Hero -->
+    <aside class="hero">
+      <p class="hero-subtitle">The intersection of AI & women's rights</p>
+      <h1 class="hero-top">HER <br> GOVERNMENT</h1>
+    </aside>
+
+    <section class="content-wrap">
+      <!-- Mission -->
+      <section id="mission" class="mission-section fade-in">
+        <h2>Our Mission</h2>
+        <p class="mission-subtitle">
+          Advancing female voices, one conversation at a time.<br>
+          Learn the system. Know your rights.
+        </p>
+
+        <div class="pillar fade-in" style="--delay:0s;">
+          <h3>1. Knowledge is Power</h3>
+          <p>A space to speak, listen, and be heard.</p>
+        </div>
+        <div class="pillar fade-in" style="--delay:0.2s;">
+          <h3>2. Safe Conversations</h3>
+          <p>Share ideas. Make an impact.</p>
+        </div>
+        <div class="pillar fade-in" style="--delay:0.4s;">
+          <h3>3. Amplify Your Voice</h3>
+          <p>Make sure your voice counts in your community and beyond.</p>
+        </div>
+
+        <div class="center-chat-btn">
+          <button class="scroll-btn" data-scroll="chat">Chat with Civi</button>
+        </div>
+      </section>
+
+      <!-- Chat -->
+      <section id="chat" class="chat-area" aria-live="polite">
+        <div class="chat-header">
+          <div class="title">Civi — Her Government's Chatbot</div>
+          <div id="status" class="status">Ready</div>
+        </div>
+
+        <div id="messages" class="messages" role="log"></div>
+
+        <div class="composer">
+          <input id="input" type="text" placeholder="Ask about policies, civic resources, or 'what can I do locally'..." autocomplete="off"/>
+          <button id="sendBtn" aria-label="Send message">Send</button>
+        </div>
+
+        <div class="quick-replies" id="quickReplies">
+          <button class="quick">What can I do locally?</button>
+          <button class="quick">Explain voting rights</button>
+          <button class="quick">Resources for reproductive health</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
