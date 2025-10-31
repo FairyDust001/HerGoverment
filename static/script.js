@@ -1,6 +1,4 @@
-// =========================
 // Chat functionality
-// =========================
 const input = document.getElementById('input');
 const sendBtn = document.getElementById('sendBtn');
 const messages = document.getElementById('messages');
@@ -84,9 +82,7 @@ quickReplies.addEventListener('click', (e) => {
   }
 });
 
-// =========================
 // Smooth scroll buttons
-// =========================
 document.querySelectorAll('.scroll-btn, .nav-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const targetId = btn.getAttribute('data-scroll');
@@ -97,9 +93,7 @@ document.querySelectorAll('.scroll-btn, .nav-btn').forEach(btn => {
   });
 });
 
-// =========================
 // Fade-in animation for mission pillars
-// =========================
 const pillars = document.querySelectorAll('.pillar');
 
 function handleFadeIn() {
